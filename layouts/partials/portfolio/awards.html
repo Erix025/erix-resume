@@ -1,0 +1,13 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+    <div class="my-auto" id="awards-content">
+        <h2 class="mb-5">{{ i18n "awards" | default "Awards" }}</h2>
+        <div class="awards-list">
+            {{ range .Data.awards }}
+            <div class="award-item d-flex justify-content-between align-items-center mb-3">
+                <h3 class="award-name mb-0">{{ .name }}</h3>
+                <span class="award-date text-primary">{{ .date }}</span>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
