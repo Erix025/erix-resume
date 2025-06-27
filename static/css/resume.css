@@ -17,18 +17,18 @@ body {
 }
 
 h1,
+h2 {
+  font-family: 'Saira Extra Condensed', serif;
+  font-weight: 700;
+  color: #343a40;
+}
+
 h3,
 h4,
 h5,
 h6 {
   font-family: 'Inter', 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 600;
-  color: #343a40;
-}
-
-h2 {
-  font-family: 'Saira Extra Condensed', serif;
-  font-weight: 700;
   color: #343a40;
 }
 
