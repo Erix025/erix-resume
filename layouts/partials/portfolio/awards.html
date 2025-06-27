@@ -4,7 +4,10 @@
         <div class="awards-list">
             {{ range .Data.awards }}
             <div class="award-item d-flex justify-content-between align-items-center mb-3">
-                <h3 class="award-name mb-0">{{ .name }}</h3>
+                <div class="award-info">
+                    <h3 class="award-name mb-0">{{ .name }}</h3>
+                    <p class="award-level text-muted mb-0">{{ .award }}</p>
+                </div>
                 <span class="award-date text-primary">{{ .date }}</span>
             </div>
             {{ end }}
