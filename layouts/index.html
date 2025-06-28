@@ -1,7 +1,8 @@
 {{ define "main" }}
    {{ partial "about.html" .}}
    {{ $projects := slice "creations" "contributions" }}
-   {{ $sections := slice "publications" "blog" }}
+   {{ $sections := slice "publications" }}
+   {{ $externalLinks := slice "blog" }}
    {{ $site := .Site }}
    {{ range .Site.Params.sections }}
       {{ $sectionName := . }}
@@ -14,6 +15,10 @@
          {{ with $site.GetPage "section" . }}
             {{ .Scratch.Set "sectionId" $sectionName }} 
             {{ partial "sectionSummary" . }}
+         {{ end }}
+      {{ else if in $externalLinks . }}
+         {{ if eq . "blog" }}
+            {{ partial "blogExternalLink" $site }}
          {{ end }}
       {{ else }}
          {{ partial (printf "portfolio/%s" . ) $site }}
