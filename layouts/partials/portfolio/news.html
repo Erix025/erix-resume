@@ -7,9 +7,9 @@
                 <div class="news-header d-flex justify-content-between align-items-start mb-2">
                     <h3 class="news-title mb-0">
                         {{ if .link }}
-                            <a href="{{ .link }}" target="_blank">{{ .title }}</a>
+                            <a href="{{ .link }}" target="_blank">{{ .title | markdownify }}</a>
                         {{ else }}
-                            {{ .title }}
+                            {{ .title | markdownify }}
                         {{ end }}
                     </h3>
                     <span class="news-date text-primary">{{ .date }}</span>
