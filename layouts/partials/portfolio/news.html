@@ -1,0 +1,24 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="news">
+    <div class="my-auto" id="news-content">
+        <h2 class="mb-5">{{ i18n "news" | default "News" }}</h2>
+        <div class="news-list">
+            {{ range .Data.news }}
+            <div class="news-item mb-4">
+                <div class="news-header d-flex justify-content-between align-items-start mb-2">
+                    <h3 class="news-title mb-0">
+                        {{ if .link }}
+                            <a href="{{ .link }}" target="_blank">{{ .title }}</a>
+                        {{ else }}
+                            {{ .title }}
+                        {{ end }}
+                    </h3>
+                    <span class="news-date text-primary">{{ .date }}</span>
+                </div>
+                <div class="news-content">
+                    <p class="mb-0">{{ .content | markdownify }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
