@@ -2,14 +2,30 @@
     <div class="my-auto" id="awards-content">
         <h2 class="mb-5">{{ i18n "awards" | default "Awards" }}</h2>
         <div class="awards-list">
+            {{/* Featured awards first */}}
             {{ range .Data.awards }}
-            <div class="award-item d-flex justify-content-between align-items-center mb-3">
+            {{ if .featured }}
+            <div class="award-item featured d-flex justify-content-between align-items-start">
                 <div class="award-info">
                     <h3 class="award-name mb-0">{{ .name }}</h3>
                     <p class="award-level text-muted mb-0">{{ .award }}</p>
                 </div>
                 <span class="award-date text-primary">{{ .date }}</span>
             </div>
+            {{ end }}
+            {{ end }}
+
+            {{/* Regular awards */}}
+            {{ range .Data.awards }}
+            {{ if not .featured }}
+            <div class="award-item d-flex justify-content-between align-items-start">
+                <div class="award-info">
+                    <h3 class="award-name mb-0">{{ .name }}</h3>
+                    <p class="award-level text-muted mb-0">{{ .award }}</p>
+                </div>
+                <span class="award-date text-primary">{{ .date }}</span>
+            </div>
+            {{ end }}
             {{ end }}
         </div>
     </div>
