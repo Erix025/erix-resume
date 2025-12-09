@@ -1,3 +1,24 @@
+:root {
+  /* --- 核心连接色 --- */
+  --color-blue-pro: #00509D;
+  --color-blue-soft: #B7C9D6;
+
+  /* --- Hearth Palette (生活/柔和) --- */
+  --color-bg-warm: #FBF8FF;
+  --color-neutral-taupe: #DCD5CE;
+  --color-text-soft: #5A5A5A;
+
+  /* --- Apex Palette (工作/严谨) --- */
+  --color-bg-white: #FFFFFF;
+  --color-accent-vibrant: #FF8800;
+  --color-text-dark: #1A1A1A;
+
+  /* --- 图表扩展色 (Apex Data) --- */
+  --color-data-teal: #0092AD;
+  --color-data-green: #66BB6A;
+  --color-data-purple: #7D5BA6;
+}
+
 html {
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
@@ -6,7 +27,7 @@ html {
 body {
   font-family: 'Inter', 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   padding-top: 54px;
-  color: #868e96;
+  color: var(--color-text-soft);
 }
 
 @media (min-width: 992px) {
@@ -20,7 +41,7 @@ h1,
 h2 {
   font-family: 'Saira Extra Condensed', serif;
   font-weight: 700;
-  color: #343a40;
+  color: var(--color-text-dark);
 }
 
 h3,
@@ -29,7 +50,7 @@ h5,
 h6 {
   font-family: 'Inter', 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 600;
-  color: #343a40;
+  color: var(--color-text-dark);
 }
 
 
@@ -55,11 +76,11 @@ h2 {
 }
 
 .list-social-icons a {
-  color: #495057;
+  color: var(--color-text-soft);
 }
 
 .list-social-icons a:hover {
-  color: #3878bd;
+  color: var(--color-blue-pro);
 }
 
 .list-social-icons a .fa-lg {
@@ -71,7 +92,7 @@ h2 {
 }
 
 .list-icons .list-inline-item i:hover {
-  color: #3878bd;
+  color: var(--color-blue-pro);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -126,7 +147,7 @@ h2 {
 }
 
 section.resume-section {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--color-neutral-taupe);
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
 }
@@ -149,26 +170,26 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #3878bd !important;
+  background-color: var(--color-blue-pro) !important;
 }
 
 .text-primary {
-  color: #3878bd !important;
+  color: var(--color-blue-pro) !important;
 }
 
 a {
-  color: #3878bd;
+  color: var(--color-blue-pro);
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #824027;
+  color: var(--color-accent-vibrant);
 }
 
 /* Awards section styles */
 .awards-list .award-item {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--color-neutral-taupe);
   padding: 1rem 0;
 }
 
@@ -179,7 +200,7 @@ a:active {
 .awards-list .award-name {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #343a40;
+  color: var(--color-text-dark);
   flex-grow: 1;
 }
 
